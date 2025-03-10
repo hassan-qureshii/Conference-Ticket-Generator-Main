@@ -1,0 +1,85 @@
+
+body {
+    background-color: #0d0d0d;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+.container {
+    background-image: url('./assets/images/background-desktop.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+}
+.container img {
+    margin-bottom: 1rem;
+}
+.container h1 {
+    color: white;
+    font-size: 1.875rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+.container p {
+    color: #d1d5db;
+    margin-bottom: 1.5rem;
+}
+.upload-area {
+    background-color: #1f2937;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+    border: 2px dashed #4b5563;
+}
+.upload-area i {
+    color: #9ca3af;
+    font-size: 2rem;
+}
+.upload-area p {
+    color: #9ca3af;
+    margin-top: 0.5rem;
+}
+.upload-area small {
+    color: #6b7280;
+    display: block;
+    margin-top: 0.5rem;
+}
+.form-input {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    background-color: #1f2937;
+    color: #d1d5db;
+    border: none;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+.form-input::placeholder {
+    color: #6b7280;
+}
+.form-button {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    background-color: #f97316;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+.form-button:hover {
+    background-color: #ea580c;
+}
+.hidden {
+    display: none;
+}

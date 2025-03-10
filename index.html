@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coding Conf 2025</title>
+    <link  rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+<div class="container">
+    <div class="mb-6">
+        <img alt="Coding Conf Logo" src="./assets/images/logo-full.svg" />
+        <h1>Your Journey to Coding Conf 2025 Starts Here!</h1>
+        <p>Secure your spot at next year's biggest coding conference.</p>
+    </div>
+    <div class="upload-area" id="drop-area">
+        <p>Drag and drop or click to upload</p>
+        <img src="./assets/images/icon-upload.svg" alt="icon">
+        <small>Upload your photo (JPG or PNG, max size: 5MB).</small>
+        <input type="file" id="file-input" class="hidden" accept="image/*"/>
+    </div>
+    <form id="registration-form">
+        <input id="full-name" class="form-input" placeholder="Full Name" type="text" required/>
+        <input id="email" class="form-input" placeholder="Email Address" type="email" required/>
+        <input id="github-username" class="form-input" placeholder="GitHub Username" type="text" required/>
+        <button class="form-button" type="submit">Generate My Ticket</button>
+    </form>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
