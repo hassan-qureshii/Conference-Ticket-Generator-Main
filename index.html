@@ -1,30 +1,135 @@
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8"/>
+  <head>
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Coding Conf 2025</title>
-    <link  rel="stylesheet" href="styles.css"/>
-</head>
-<body>
-<div class="container">
-    <div class="mb-6">
-        <img alt="Coding Conf Logo" src="./assets/images/logo-full.svg" />
-        <h1>Your Journey to Coding Conf 2025 Starts Here!</h1>
-        <p>Secure your spot at next year's biggest coding conference.</p>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Custom Colors -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#083b75',       // Deep blue
+              secondary: '#f3f8fc',     // Soft background
+              accent: '#7b4f93',        // Lightened purple accent
+            },
+            fontFamily: {
+              sans: ['Poppins', 'sans-serif'],
+              mono: ['Roboto Mono', 'monospace'],
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body
+    class="bg-secondary font-sans flex items-center justify-center min-h-screen p-6"
+  >
+    <div
+      id="main-container"
+      class="bg-white shadow-2xl rounded-2xl p-8 w-full max-w-md text-center border-t-8 border-primary transition-all duration-700"
+    >
+      <img
+        alt="Coding Conf Logo"
+        src="./assets/images/logo-full.svg"
+        class="mx-auto mb-4 w-32 animate-fadeIn"
+      />
+      <h1 class="text-primary text-2xl font-bold mb-2">
+        Your Journey to Coding Conf 2025 Starts Here!
+      </h1>
+      <p class="text-gray-600 mb-6">
+        Secure your spot at next year's biggest coding conference.
+      </p>
+
+      <!-- Upload Area -->
+      <div
+        id="drop-area"
+        class="bg-secondary border-2 border-dashed border-primary rounded-xl p-6 mb-6 cursor-pointer hover:bg-blue-50 transition-colors"
+      >
+        <p class="text-gray-500">Drag and drop or click to upload</p>
+        <img
+          src="./assets/images/icon-upload.svg"
+          alt="icon"
+          class="mx-auto my-3 w-10"
+        />
+        <small class="text-gray-400 block"
+          >Upload your photo (JPG or PNG, max size: 5MB).</small
+        >
+        <input
+          type="file"
+          id="file-input"
+          class="hidden"
+          accept="image/*"
+        />
+      </div>
+
+      <!-- Form -->
+      <form id="registration-form" class="space-y-4">
+        <input
+          id="full-name"
+          type="text"
+          placeholder="Full Name"
+          required
+          class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:outline-none"
+        />
+        <input
+          id="email"
+          type="email"
+          placeholder="Email Address"
+          required
+          class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:outline-none"
+        />
+        <input
+          id="github-username"
+          type="text"
+          placeholder="GitHub Username"
+          required
+          class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:outline-none"
+        />
+        <button
+          type="submit"
+          class="w-full bg-accent text-white py-3 rounded-lg font-semibold hover:opacity-90 transition-all duration-300 shadow-md"
+        >
+          Generate My Ticket
+        </button>
+      </form>
     </div>
-    <div class="upload-area" id="drop-area">
-        <p>Drag and drop or click to upload</p>
-        <img src="./assets/images/icon-upload.svg" alt="icon">
-        <small>Upload your photo (JPG or PNG, max size: 5MB).</small>
-        <input type="file" id="file-input" class="hidden" accept="image/*"/>
+
+    <!-- Ticket Screen (Hidden Initially) -->
+    <div
+      id="ticket-container"
+      class="hidden bg-white rounded-2xl shadow-2xl p-8 w-full max-w-md text-center border-t-8 border-accent animate-fadeIn"
+    >
+      <h2 class="text-primary text-3xl font-bold mb-4">
+      Ticket Generated!
+      </h2>
+      <p class="text-gray-600 mb-6">
+        Thank you for registering! Here's your Coding Conf 2025 ticket.
+      </p>
+      <div
+        id="ticket-info"
+        class="bg-secondary rounded-xl p-4 text-left text-gray-700 font-mono"
+      ></div>
+      <button
+        id="back-btn"
+        class="mt-6 px-6 py-2 bg-accent text-white rounded-lg hover:opacity-90 transition-colors duration-300"
+      >
+        Back to Form
+      </button>
     </div>
-    <form id="registration-form">
-        <input id="full-name" class="form-input" placeholder="Full Name" type="text" required/>
-        <input id="email" class="form-input" placeholder="Email Address" type="email" required/>
-        <input id="github-username" class="form-input" placeholder="GitHub Username" type="text" required/>
-        <button class="form-button" type="submit">Generate My Ticket</button>
-    </form>
-</div>
-<script src="script.js"></script>
-</body>
+
+    <script src="script.js"></script>
+  </body>
 </html>
